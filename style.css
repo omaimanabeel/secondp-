@@ -1,0 +1,118 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* تغيير إلى flex-start لعدم توسيط عمودي مفرط */
+    min-height: 100vh;
+    margin: 20px;
+    direction: rtl; /* لضمان عرض المحتوى من اليمين لليسار */
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    margin-top: 50px; /* تباعد من الأعلى */
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+#todo-form {
+    display: flex;
+    margin-bottom: 25px;
+}
+
+#new-task-title {
+    flex-grow: 1;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-right: 10px; /* تباعد لليسار من الزر */
+}
+#new-task-title:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+#todo-form button {
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s ease;
+}
+#todo-form button:hover {
+    background-color: #0056b3;
+}
+
+#task-list {
+    list-style: none;
+    padding: 0;
+}
+
+#task-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#task-list li.completed {
+    background-color: #e6ffe6;
+    text-decoration: line-through;
+    color: #888;
+}
+
+#task-list li .task-content {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+#task-list li .task-checkbox {
+    margin-left: 15px; /* تباعد من النص لليسار */
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    accent-color: #28a745; /* لون العلامة عند التحديد */
+}
+
+#task-list li .task-title {
+    font-size: 18px;
+    color: #444;
+    flex-grow: 1;
+}
+
+#task-list li .delete-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+}
+#task-list li .delete-btn:hover {
+    background-color: #c82333;
+}
